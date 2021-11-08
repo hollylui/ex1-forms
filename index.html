@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basic Data Exercise| Exercise Form 1</title>
+  </head>
+  <body>
+    <header>
+      <h1>Exercise Form 1</h1>
+    </header>
+
+    <form action="results.html" method="POST">
+      <!-- personal data -->
+      <fieldset>
+        <legend>Personal Data</legend>
+        <!-- first name -->
+        <div>
+          <label for="fname" name="fname" id="fname">First name:</label>
+          <input type="text" id="fname" name="fname" required />
+        </div>
+        <!-- last name -->
+        <div>
+          <label for="lname" name="lname" id="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" required />
+        </div>
+        <!-- street -->
+        <div>
+          <label for="street" name="street" id="street">Street:</label>
+          <input type="text" id="street" name="street" />
+        </div>
+        <!-- zip code -->
+        <div>
+          <label for="zcode" name="zcode" id="zcode">Zipcode:</label>
+          <input
+            type="number"
+            id="zcode"
+            name="zcode"
+            placeholder="e.g. 12345"
+          />
+        </div>
+        <!-- city -->
+        <div>
+          <label for="city" name="city" id="city">City:</label>
+          <input type="text" id="city" name="city" />
+        </div>
+        <!-- phone -->
+        <div>
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g. 123-456789"
+            pattern="[0-9]{3}-[0-9]{6}"
+          />
+        </div>
+        <!-- email -->
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <!-- comments -->
+        <div>
+          <label for="comments">Comments:</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="5"
+            placeholder="Tell us more about important colors, etc."
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <!-- products -->
+
+      <div class="div">
+        <fieldset>
+          <legend>Products</legend>
+
+          <!-- web design -->
+          <div><label for="webdesign">Web Design:</label></div>
+
+          <div>
+            <input
+              type="radio"
+              id="individual"
+              name="webdesign"
+              value="individual"
+            />
+            <label for="individual-">Individual</label>
+            <input
+              type="radio"
+              id="template"
+              name="webdesign"
+              value="template"
+            />
+            <label for="template-">Template</label>
+          </div>
+
+          <!-- web development -->
+          <div><label for="webdevelop">Web Development:</label></div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="html-css"
+              name="webdevelop"
+              value="html-css"
+            />
+            <label for="html-css">HTML & CSS</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="javascript"
+              name="webdevelop"
+              value="javascript"
+            />
+            <label for="java-cript">JavaScript</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="mongoDB"
+              name="webdevelop"
+              value="mongoDB"
+            />
+            <label for="mongo-DB">MongoDB</label>
+          </div>
+          <!-- project start -->
+          <label for="pstart">Project Start:</label>
+          <input type="date" id="pstart" name="pstart" required />
+
+          <!-- project end -->
+          <label for="pend">Project End:</label>
+          <input type="date" id="pend" name="pend" />
+          <!-- Category -->
+          <label for="cat">Category:</label>
+          <select name="cat" id="cat">
+            <option value="personal">Personal</option>
+            <option value="company">Company</option>
+            <option value="charity">Charity</option>
+            <option value="government">Government</option>
+          </select>
+        </fieldset>
+        <!-- submit button -->
+        <input type="submit" value="Order the services" />
+      </div>
+    </form>
+  </body>
+</html>
